@@ -16,6 +16,8 @@ MSITrack, a large-scale and challenging benchmark for Multispectral Single Objec
 MSITrack is currently the largest and most diverse multispectral single object tracking dataset, comprising 300 videos and over 129k frames of multispectral imagery. Each frame contains 8 bands covering from visible light to near-infrared bands, with a spatial resolution of up to 1200×900 pixels. MSITrack includes a wide range of tracking categories. In addition to commonly seen classes such as pedestrian, car and bicycle, the dataset features less frequently encountered objects such as meerkat, lion, gorilla, flamingo, elk, monkey and giraffe, totaling 55 distinct categories. Many of these classes are introduced to the multispectral tracking domain for the first time. Furthermore, the dataset  incorporates 11 key challenge attributes, making it highly representative of real world challenges encountered in practical applications.
 
 ![all_challs](https://github.com/Fengtao191/MSITrack/blob/main/images/Msitrack.png)
+![all_challs](https://github.com/Fengtao191/MSITrack/blob/main/images/annotation%20examples.png)
+
 
 #### Download:
 

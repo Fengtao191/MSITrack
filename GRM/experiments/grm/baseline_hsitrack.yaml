@@ -1,0 +1,74 @@
+DATA:
+  MAX_SAMPLE_INTERVAL: 200
+  MEAN:
+  - 0.449
+  - 0.328
+  - 0.326
+  - 0.322
+  - 0.328
+  - 0.324
+  - 0.326
+  - 0.327
+  SEARCH:
+    CENTER_JITTER: 3
+    FACTOR: 4.0
+    SCALE_JITTER: 0.25
+    SIZE: 256
+    NUMBER: 1
+  STD:
+  - 0.236
+  - 0.173
+  - 0.171
+  - 0.170
+  - 0.176
+  - 0.157
+  - 0.162
+  - 0.164
+  TEMPLATE:
+    CENTER_JITTER: 0
+    FACTOR: 2.0
+    SCALE_JITTER: 0
+    SIZE: 128
+  TRAIN:
+    DATASETS_NAME:
+      - HSITrack
+    DATASETS_RATIO:
+      - 1
+
+    SAMPLE_PER_EPOCH: 8000
+MODEL:
+  # PRETRAIN_FILE: 'mae_pretrain_vit_base.pth'
+  PRETRAIN_FILE: 'mae_pretrain_vit_base_cope.pth'
+  TGT_TYPE: 'allmax'
+  BACKBONE:
+    TYPE: vit_base
+    STRIDE: 16
+  HEAD:
+    TYPE: CENTER
+    NUM_CHANNELS: 256
+TRAIN:
+  BACKBONE_MULTIPLIER: 0.1
+  DROP_PATH_RATE: 0.1
+  CE_START_EPOCH: 10  # candidate elimination start epoch
+  CE_WARM_EPOCH: 25  # candidate elimination warm up epoch
+  BATCH_SIZE: 8
+  EPOCH: 50
+  GIOU_WEIGHT: 2.0
+  L1_WEIGHT: 5.0
+  GRAD_CLIP_NORM: 0.1
+  LR: 0.0004
+  LR_DROP_EPOCH: 30
+  NUM_WORKER: 16
+  OPTIMIZER: ADAMW
+  PRINT_INTERVAL: 10
+  SCHEDULER:
+    TYPE: step
+    DECAY_RATE: 0.1
+  VAL_EPOCH_INTERVAL: 20
+  WEIGHT_DECAY: 0.0001
+TEST:
+  EPOCH: 50
+  SEARCH_FACTOR: 4.0
+  SEARCH_SIZE: 256
+  TEMPLATE_FACTOR: 2.0
+  TEMPLATE_SIZE: 128

@@ -4,7 +4,7 @@
 
 The paper " MSITrack: A Challenging Benchmark for Multispectral Single Object Tracking " has been accepted by ACMMM 2025 Datasets Track.
 
-![MSITrack scenes](https://github.com/Fengtao191/MSITrack/blob/main/images/MSITrack%20scenes.pdf)
+![MSITrack scenes](https://github.com/Fengtao191/MSITrack/blob/main/images/MSITrack%20scenes.png)
 
 
 ## Dataset
